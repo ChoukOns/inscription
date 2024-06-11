@@ -1,0 +1,185 @@
+.small-input {
+  width: 150px; /* ou toute autre largeur que vous préférez */
+}
+
+.inscription-form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #0597a1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.input-container {
+  position: relative;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  
+}
+
+input:focus {
+  outline: none;
+  border-color: #0597a1;
+}
+
+.placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+
+input:placeholder-shown + .placeholder-text {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #4FA686;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #FF8A33;
+  color: #fff;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #FF6B00;
+}
+
+.logo {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+.forgot-password-link {
+  color: #007bff; 
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline; 
+}
+
+.user-type-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 15px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.user-type-button:hover {
+  background-color: #555;
+}
+
+.user-type-button.active {
+  background-color: #333;
+}
+
+
+select:focus {
+  outline: none;
+  border-color: #0597a1;
+}
+
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.orange-button{
+  background-color: rgba(255, 166, 0, 0.836);
+  width:250px;
+}
+
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1100px; /* Ajustez cette valeur en fonction de vos besoins */
+}
+
+.inscription-form-container {
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: auto;
+}
+
+
+.apprenant-form,
+.instructeur-form,
+.admin-form {
+  max-width: 400px; 
+}
+
+.form-input,
+.small-input {
+  width: 250px; /* ou toute autre largeur que vous préférez */
+}
+
+
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: auto;
+}
