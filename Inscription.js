@@ -222,46 +222,11 @@ const Inscription = () => {
         </select>
       </label>
     );
+    
 
     const userSpecificFields = {
       apprenant: [
         commonFields,
-        <label key="statut">
-          {t('statut')}: <br />
-          <input
-            type="text"
-            name="statut"
-            value={apprenantData.statut}
-            onChange={(e) => handleInputChange(e, setApprenantData)}
-            required
-            className="form-input"
-            placeholder={t('Entrer le statut')}
-          />
-        </label>,
-        <label key="niveau">
-          {t('niveau')}: <br />
-          <input
-            type="text"
-            name="niveau"
-            value={apprenantData.niveau}
-            onChange={(e) => handleInputChange(e, setApprenantData)}
-            required
-            className="form-input"
-            placeholder={t('Entrer le niveau')}
-          />
-        </label>,
-        <label key="ville">
-          {t('ville')}: <br />
-          <input
-            type="text"
-            name="ville"
-            value={apprenantData.ville}
-            onChange={(e) => handleInputChange(e, setApprenantData)}
-            required
-            className="form-input"
-            placeholder={t('Entrer la ville')}
-          />
-        </label>,
         <label key="dateNaiss">
           {t('dateNaiss')}: <br />
           <input
@@ -274,21 +239,73 @@ const Inscription = () => {
             placeholder={t('Entrer la date de naissance')}
           />
         </label>,
+        <label key="statut">
+  {t('statut')}: <br />
+  <select
+    name="statut"
+    value={apprenantData.statut}
+    onChange={(e) => handleInputChange(e, setApprenantData)}
+    required
+    className="form-input"
+  >
+    <option value="">{t('selectionnez Statut')}</option>
+    <option value="Ingénieur">{t('ingenieur')}</option>
+    <option value="Développeur">{t('developpeur')}</option>
+    <option value="Etudiant">{t('etudiant')}</option>
+    <option value="Autre">{t('autre')}</option>
+  </select>
+</label>
+,
+        <label key="niveau">
+        {t('niveau')}: <br />
+        <select
+          name="niveau"
+          value={instructeurData.niveau}
+          onChange={(e) => handleInputChange(e, setInstructeurData)}
+          required
+          className="form-input"
+        >
+          <option value="">{t('selectionnez Niveau')}</option>
+          <option value="débutant">{t('debutant')}</option>
+          <option value="intermédiaire">{t('intermediaire')}</option>
+          <option value="avancé">{t('avance')}</option>
+        </select>
+      </label>
+      ,
+        <label key="ville">
+          {t('ville')}: <br />
+          <input
+            type="text"
+            name="ville"
+            value={apprenantData.ville}
+            onChange={(e) => handleInputChange(e, setApprenantData)}
+            required
+            className="form-input"
+            placeholder={t('Entrer la ville')}
+          />
+        </label>,
+        
+    
       ],
       instructeur: [
         commonFields,
         <label key="poste">
-          {t('poste')}: <br />
-          <input
-            type="text"
-            name="poste"
-            value={instructeurData.poste}
-            onChange={(e) => handleInputChange(e, setInstructeurData)}
-            required
-            className="form-input"
-            placeholder={t('Entrer le poste')}
-          />
-        </label>,
+  {t('poste')}: <br />
+  <select
+    name="poste"
+    value={instructeurData.poste}
+    onChange={(e) => handleInputChange(e, setInstructeurData)}
+    required
+    className="form-input"
+  >
+    <option value="">{t('selectionnez Poste')}</option>
+    <option value="enseignant">{t('enseignant')}</option>
+    <option value="formateur professionnel">{t('formateur Professionnel')}</option>
+    <option value="ingénieur">{t('ingenieur')}</option>
+    <option value="autre">{t('autre')}</option>
+  </select>
+</label>,
+
         <label key="etablissement">
           {t('etablissement')}: <br />
           <input
@@ -313,18 +330,22 @@ const Inscription = () => {
             placeholder={t('Entrer la spécialité')}
           />
         </label>,
-        <label key="niveau">
-          {t('niveau')}: <br />
-          <input
-            type="text"
-            name="niveau"
-            value={instructeurData.niveau}
-            onChange={(e) => handleInputChange(e, setInstructeurData)}
-            required
-            className="form-input"
-            placeholder={t('Entrer le niveau')}
-          />
-        </label>,
+    <label key="niveau">
+    {t('niveau')}: <br />
+    <select
+      name="niveau"
+      value={instructeurData.niveau}
+      onChange={(e) => handleInputChange(e, setInstructeurData)}
+      required
+      className="form-input"
+    >
+      <option value="">{t('selectionnez Niveau')}</option>
+      <option value="débutant">{t('debutant')}</option>
+      <option value="intermédiaire">{t('intermediaire')}</option>
+      <option value="avancé">{t('avance')}</option>
+    </select>
+  </label>
+  ,
         <label key="tel">
           {t('tel')}: <br />
           <input
