@@ -206,7 +206,7 @@ const Inscription = () => {
     }
 
     const commonFields = (
-      <label key="langue">
+      <center><label key="langue">
         {t('langue')}: <br />
         <select
           name="langue"
@@ -220,14 +220,14 @@ const Inscription = () => {
           <option value="Français">{t('francais')}</option>
           <option value="Arabe">{t('arabe')}</option>
         </select>
-      </label>
+      </label></center>
     );
     
 
     const userSpecificFields = {
       apprenant: [
         commonFields,
-        <label key="dateNaiss">
+       <center> <label key="dateNaiss">
           {t('dateNaiss')}: <br />
           <input
             type="date"
@@ -285,11 +285,11 @@ const Inscription = () => {
           />
         </label>,
         
-    
+        </center>
       ],
       instructeur: [
         commonFields,
-        <label key="poste">
+        <center><label key="poste">
   {t('poste')}: <br />
   <select
     name="poste"
@@ -357,7 +357,7 @@ const Inscription = () => {
             className="form-input"
             placeholder={t('Entrer le téléphone')}
           />
-        </label>,
+        </label>,</center>
       ],
       admin: [commonFields],
     };
@@ -379,7 +379,7 @@ const Inscription = () => {
         <form onSubmit={handleSubmitFn[userType]}>
          
           <h1>{t('Bienvenue')}</h1>
-          <label>
+          <center> <label>
             {t('nom')}: <br />
             <input
               type="text"
@@ -420,9 +420,10 @@ const Inscription = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
-          </label>
+          </label></center>
           {userSpecificFields[userType]}
-          <button type="submit" className="orange-button">{t('inscrire')}</button>
+          <br />
+         <center> <button type="submit" className="orange-button">{t('inscrire')}</button></center>
         </form>
         <img src={logo} alt="Intellego Logo" className="logo" />
       </div>
